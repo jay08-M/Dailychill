@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Daily Chill</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <img src="images/dailychill_logo.png" class="logo">
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h1>Send us a message</h1>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="numberInput"></label>
+                            <input
+                            placeholder="Your Phone Number"
+                            type="text"
+                            id="numberInput"
+                            name="numberInput"
+                            pattern="\d{1,11}"
+                            maxlength="11"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" id="alertButton">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h1>Contact Information</h1>
+                    <p><i class="fas fa-phone"></i>0946 592 6225</p>
+                    <p><i class="fas fa-envelope"></i>dailychillpagrai@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Unit 2 Pagrai Hills, Brgy. Mayamot, Antipolo City, Philippines</p>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15442.048521749508!2d121.10395343697813!3d14.62684576983546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9f4c7a10cf7%3A0x418c418ad380b064!2sUnit%202!5e0!3m2!1sen!2sph!4v1717684339763!5m2!1sen!2sph" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="images/dailychillico.png">
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="shop.html">Shop</a>
+                |
+                <a href="reviews.html">Reviews</a>
+                |
+                <a href="contact.html">Contacts</a>
+            </p>
+            <p class="footer-company-name">Copyright © 2024 <strong>DailyChill</strong>
+                All rights reserved</p>
+        </div>
+    
+        <div class="footer-center">
+            <div>
+                <i class="fas fa-phone"></i>
+                <p>0946 592 6225</p>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <p><a href="dailychillpagrai@gmail.com">dailychillpagrai@gmail.com</a></p>
+            </div>
+        </div>
+    
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Social Links</span>
+                
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/dailychillpagrai" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/dailychillpagrai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contactscript.js"></script>
+    
+</body>
+</html>

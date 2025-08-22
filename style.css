@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lilita+One&display=swap" rel="stylesheet');
+
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: "Lexend", sans-serif;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(images/background.jpg);
+    z-index: 99;
+}
+
+.nav-content{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 160px;
+}
+
+nav .checkbox{
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+
+nav .checkbox i{
+    font-size: 2rem;
+    color: #434344;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    transition: left 0.10s;
+}
+
+ul li a{
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #434344;
+    transition: 0.30s;
+}
+
+ul li a:hover{
+    background-color: #434344;
+    color: #fffefd;
+    transition: 0.30s;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.section{
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.section-container{
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    animation: transitionIn 0.60s;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: transitionIn 0.60s;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 3rem;
+    color: #434344;
+    margin-bottom: 1rem;
+    animation: transitionIn 0.60s;
+}
+
+.description{
+    line-height: 1.5rem;
+    color: #434344;
+    margin-bottom: 2rem;
+    animation: transitionIn 0.60s;
+}
+
+.order-now {
+    color: #fffefd;
+}
+
+.action-btn{
+    display: flex;
+    animation: transitionIn 0.60s;
+}
+
+.action-btn button{
+    font-size: 14px;
+    padding: 1rem 1rem;
+    background-color: #434344;
+    color: #fffefd;
+    border-radius: 9px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    font-family: "Lexend", sans-serif;
+    animation: transitionIn 0.60s;
+}
+
+.action-btn button:hover{
+    background-color: #707174;
+    color: #fffefd;
+    border-radius: 9px;
+}
+
+.image{
+    display: grid;
+    place-items: center;
+    animation: transitionIn 0.60s;
+}
+
+.image img{
+    width: min(45rem, 105%);
+    animation: transitionIn 0.60s;
+}
+
+.about{
+    width: 100%;
+    background-image: url(/images/aboutbg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: transitionIn 0.60s;
+}
+
+.about .main img{
+   margin-top:40PX ;
+   width: 680px;
+   max-width: 100%;
+   height: auto;
+   padding: 0 10px; 
+}
+
+.all-text{
+   width: 600px;
+   max-width: 100%;
+   padding: 0 10px; 
+}
+
+.main{
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all-text h1{
+    font-size: 3rem;
+    color: #fffefd;
+    margin-bottom: 20px;
+}
+
+.all-text p{
+    font-size: 17px;
+    color: #fffefd;
+    margin-bottom: 35px;
+}
+
+footer{
+    font-weight: bold; 
+    color: #fffefd;
+}
+
+.bottom-bar{
+    background-color: #434344;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: #fffefd;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+
+    ul li a{
+        font-size: 1.25rem;
+    }
+
+    .section-container{
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image{
+        grid-area: 1/1/2/2;
+    }
+
+    .action-btn{
+        margin: auto;
+    }
+
+    .about .main img{
+        margin-bottom: 35px;
+    }
+
+    .all-rext h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+

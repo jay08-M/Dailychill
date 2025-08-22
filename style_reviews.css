@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Lilita+One&display=swap" rel="stylesheet');
+
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: "Lexend", sans-serif;
+    background-image: url(images/reviewsbg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(images/reviewsbg.jpg);
+    z-index: 99;
+}
+
+.nav-content{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 160px;
+}
+
+nav .checkbox{
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+
+nav .checkbox i{
+    font-size: 2rem;
+    color: #434344;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    transition: left 0.10s;
+}
+
+ul li a{
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #434344;
+    transition: 0.30s;
+}
+
+ul li a:hover{
+    background-color: #434344;
+    color: #fffefd;
+    border-radius: 9px;
+    padding: 8px 12px;
+    transition: 0.30s
+}
+
+
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;  
+    overflow: hidden;
+    animation: transitionIn 0.60s;
+
+}
+section .heading{
+    margin-top: 85px;
+    display: inline-block;
+    position: relative;
+    color: #434344;
+    font-size: 4vw;
+    padding: 60px;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.wrapper .container{
+    position: relative;
+    width: 400px;
+    color: #434344;
+    background: #fffefd;
+    margin: 50px 10px;
+    padding: 40px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    border: solid black;
+    
+}
+.wrapper .container .profile{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%;
+    width: 100%;
+    display: block;
+}
+.wrapper .container .profile .imgBox{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border:  8px solid #070c0d;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.wrapper .container .profile .imgBox img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.wrapper .container .profile .imgBox:hover img{
+    filter: saturate(140%);
+
+}
+.wrapper .container .profile h2{
+    padding: 5px 0;
+    text-transform: capitalize;
+    color: #434344;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 18.5px;
+}
+.wrapper .container p{
+    margin-top: 50px;
+    color: #434344;
+    padding: 0 8px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.wrapper .container .left{
+    font-size: 25px;
+    display: block;
+    text-align: left;
+    color: #434344;
+}
+.wrapper .container .right{
+    font-size: 27px;
+    display: block;
+    text-align: right;
+    color: #434344;
+}
+.wrapper .container .social{
+    width: 100%;
+    margin-top: 20px;
+}
+.wrapper .container .social i{
+    font-size: 14px;
+    color: #fffefd;
+    padding: 8px;
+    background: #434344;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.wrapper .container .social i:hover{
+    background: #707174;
+}
+@media (max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #434344;
+    background-color: #434344;
+}
+
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: #fffefd;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+
+    ul li a{
+        font-size: 1.25rem;
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
